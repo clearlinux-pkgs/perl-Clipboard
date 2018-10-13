@@ -4,15 +4,16 @@
 #
 Name     : perl-Clipboard
 Version  : 0.13
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Summary  : 'Cliboard - Copy and Paste with any OS'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Clipboard-bin
-Requires: perl-Clipboard-man
-BuildRequires : perl(inc::Module::Install)
+Requires: perl-Clipboard-bin = %{version}-%{release}
+Requires: perl-Clipboard-man = %{version}-%{release}
+BuildRequires : buildreq-cpan
+BuildRequires : perl(Module::Install)
 
 %description
 SYNOPSIS
@@ -23,10 +24,20 @@ method, because we're not really "cutting" anything.
 %package bin
 Summary: bin components for the perl-Clipboard package.
 Group: Binaries
-Requires: perl-Clipboard-man
+Requires: perl-Clipboard-man = %{version}-%{release}
 
 %description bin
 bin components for the perl-Clipboard package.
+
+
+%package dev
+Summary: dev components for the perl-Clipboard package.
+Group: Development
+Requires: perl-Clipboard-bin = %{version}-%{release}
+Provides: perl-Clipboard-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-Clipboard package.
 
 
 %package man
@@ -63,9 +74,9 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -74,10 +85,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Clipboard.pm
-/usr/lib/perl5/site_perl/5.26.1/Clipboard/MacPasteboard.pm
-/usr/lib/perl5/site_perl/5.26.1/Clipboard/Win32.pm
-/usr/lib/perl5/site_perl/5.26.1/Clipboard/Xclip.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Clipboard.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/MacPasteboard.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/Win32.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/Xclip.pm
 
 %files bin
 %defattr(-,root,root,-)
@@ -87,11 +98,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/bin/clipfilter
 /usr/bin/clipjoin
 
-%files man
+%files dev
 %defattr(-,root,root,-)
+/usr/share/man/man3/Clipboard.3
+
+%files man
+%defattr(0644,root,root,0755)
 /usr/share/man/man1/clipaccumulate.1
 /usr/share/man/man1/clipbrowse.1
 /usr/share/man/man1/clipedit.1
 /usr/share/man/man1/clipfilter.1
 /usr/share/man/man1/clipjoin.1
-/usr/share/man/man3/Clipboard.3
