@@ -4,7 +4,7 @@
 #
 Name     : perl-Clipboard
 Version  : 0.13
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Summary  : 'Cliboard - Copy and Paste with any OS'
@@ -85,10 +85,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Clipboard.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/MacPasteboard.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/Win32.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Clipboard/Xclip.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Clipboard.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Clipboard/MacPasteboard.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Clipboard/Win32.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Clipboard/Xclip.pm
 
 %files bin
 %defattr(-,root,root,-)
