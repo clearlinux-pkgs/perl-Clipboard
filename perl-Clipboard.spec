@@ -4,7 +4,7 @@
 #
 Name     : perl-Clipboard
 Version  : 0.13
-Release  : 5
+Release  : 6
 URL      : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KI/KING/Clipboard-0.13.tar.gz
 Summary  : 'Cliboard - Copy and Paste with any OS'
