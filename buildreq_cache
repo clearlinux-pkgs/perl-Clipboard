@@ -1,2 +1,4 @@
-0.13
+0.19
+perl(CGI)
 perl(Module::Install)
+perl(URI::Escape)
