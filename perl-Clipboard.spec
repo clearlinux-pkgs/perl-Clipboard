@@ -4,7 +4,7 @@
 #
 Name     : perl-Clipboard
 Version  : 0.20
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.20.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.20.tar.gz
 Summary  : Perl clipboard module
