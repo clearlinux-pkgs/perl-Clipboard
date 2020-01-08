@@ -4,10 +4,10 @@
 #
 Name     : perl-Clipboard
 Version  : 0.21
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.21.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.21.tar.gz
-Summary  : Perl clipboard module
+Summary  : 'Copy and paste with any OS'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
 Requires: perl-Clipboard-bin = %{version}-%{release}
@@ -16,6 +16,7 @@ Requires: perl-Clipboard-man = %{version}-%{release}
 Requires: perl-Clipboard-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(CGI)
+BuildRequires : perl(Module::Install)
 BuildRequires : perl(URI::Escape)
 
 %description
@@ -38,7 +39,6 @@ Summary: dev components for the perl-Clipboard package.
 Group: Development
 Requires: perl-Clipboard-bin = %{version}-%{release}
 Provides: perl-Clipboard-devel = %{version}-%{release}
-Requires: perl-Clipboard = %{version}-%{release}
 Requires: perl-Clipboard = %{version}-%{release}
 
 %description dev
@@ -140,7 +140,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Clipboard.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Clipboard/MacPasteboard.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Clipboard/Win32.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Clipboard/Xclip.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Clipboard.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Clipboard/MacPasteboard.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Clipboard/Win32.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Clipboard/Xclip.pm
