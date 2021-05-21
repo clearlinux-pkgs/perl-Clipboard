@@ -138,7 +138,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Clipboard.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Clipboard/MacPasteboard.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Clipboard/Win32.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Clipboard/Xclip.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Clipboard.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/MacPasteboard.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/Win32.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/Xclip.pm
