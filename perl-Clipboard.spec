@@ -4,7 +4,7 @@
 #
 Name     : perl-Clipboard
 Version  : 0.28
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz
 Summary  : 'Copy and paste with any OS'
