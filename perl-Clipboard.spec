@@ -4,7 +4,7 @@
 #
 Name     : perl-Clipboard
 Version  : 0.28
-Release  : 29
+Release  : 30
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz
 Summary  : 'Copy and paste with any OS'
@@ -138,7 +138,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Clipboard.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/MacPasteboard.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/Win32.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Clipboard/Xclip.pm
+/usr/lib/perl5/*
